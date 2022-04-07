@@ -22,7 +22,7 @@ git clone https://github.com/Azael-Dev/azael_dc-serverstarting [local]/[azael]/[
 ensure azael_dc-serverstarting
 ```
 
-- สามารถตรวจสอบการกำหนดค่าเพิ่มเติมได้ที่ [config.server.lua](https://github.com/Azael-Dev/azael_dc-richpresence/blob/main/config.server.lua)
+- สามารถตรวจสอบการกำหนดค่าเพิ่มเติมได้ที่ [config.server.lua](https://github.com/Azael-Dev/azael_dc-serverstarting/blob/main/config.server.lua)
 
 ## เครดิต
 - [AZAEL](https://discord.gg/Ca5W62f)
