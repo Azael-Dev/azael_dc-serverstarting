@@ -35,26 +35,34 @@ CONFIG.Discord = {                                          -- Discord
 
     Embed = {                                               -- Embed
         Color = 4189972,                                    -- รหัสสี รูปแบบ Decimal (URL: https://convertingcolors.com/)
+
         Author = {                                          -- ผู้เขียน
             Name = 'AZAEL - BETA SERVER',                   -- ชื่อ
             IconURL = 'https://i.imgur.com/lQzs7T1.gif'     -- URL ภาพสัญลักษณ์ (ขนาดเล็ก)
         },
+
         Title = 'ขณะนี้เซิร์ฟเวอร์เปิดให้บริการแล้ว',                -- ชื่อเรื่อง
+
         Description = 'สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ตามขั้นตอนด้านล่างนี้',    -- คำอธิบาย
+
         Thumbnail = {                                       -- รูปภาพ (ขนาดย่อ)
             URL = 'https://i.imgur.com/lQzs7T1.gif'         -- URL
         },
+
         fields = {                                          -- ฟิลด์
             Link = {                                        -- Link
                 Text = 'Server Link'                        -- ข้อความ
             },
+            
             Endpoint = {                                    -- Endpoint
                 Text = 'Server Endpoint'                    -- ข้อความ
             }
         },
+
         Image = {                                           -- รูปภาพ (ขนาดใหญ่)
             URL = 'https://i.imgur.com/QyzBkO5.png'         -- URL
         },
+
         Footer = {                                          -- ส่วนท้าย
             Text = 'Azael Dev',                             -- ข้อความ
             IconURL = 'https://i.imgur.com/lQzs7T1.gif'     -- URL ภาพสัญลักษณ์ (ขนาดเล็ก)
