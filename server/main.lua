@@ -52,6 +52,7 @@ Citizen.SetTimeout(CONFIG.Discord.Delay, function()
     end, 'POST', json.encode({
         username = CONFIG.Discord.Webhook.Name,
         avatar_url = CONFIG.Discord.Webhook.AvatarURL,
+        content = string.format('%s <@&%s>', CONFIG.Discord.Content.Text, CONFIG.Discord.Content.Ping.RoleID),
         embeds = embeds
     }), {['Content-Type'] = 'application/json'})
 end)

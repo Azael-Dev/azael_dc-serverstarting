@@ -6,7 +6,7 @@ name 'azael_dc-serverstarting'
 
 description 'DC - Server Starting (Announcement)'
 
-version '1.0.0'
+version '1.1.0'
 
 author 'Azael Dev'
 

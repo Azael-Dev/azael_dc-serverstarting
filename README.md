@@ -1,7 +1,7 @@
 # azael_dc-serverstarting
 [FiveM](https://fivem.net/)  - Send a message on the server startup to [Discord](https://discord.com/) guild.
 
-<img src="https://i.imgur.com/nLUPUq1.gif" width="800"/>
+<img src="https://i.imgur.com/FToZXd8.gif" width="800"/>
 
 ## ดาวน์โหลด
 
@@ -13,6 +13,7 @@ git clone https://github.com/Azael-Dev/azael_dc-serverstarting [local]/[azael]/[
 
 ### ด้วยตนเอง
 - ดาวน์โหลด https://github.com/Azael-Dev/azael_dc-serverstarting/archive/refs/heads/main.zip
+- แก้ไข `azael_dc-serverstarting-main` เป็น `azael_dc-serverstarting`
 - วางไว้ใน `[local]/[azael]/[discord]`
 
 ## ติดตั้ง

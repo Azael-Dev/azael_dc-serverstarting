@@ -33,6 +33,14 @@ CONFIG.Discord = {                                          -- Discord
         AvatarURL = 'https://i.imgur.com/lQzs7T1.gif'       -- URL ภาพประจำตัว 
     },
 
+    Content = {                                             -- Content
+        Text = 'Announce to',                               -- ข้อความ
+
+        Ping = {                                            -- ปิง
+            RoleID = 721619126820536380                     -- รหัสบทบาท
+        }
+    },
+
     Embed = {                                               -- Embed
         Color = 4189972,                                    -- รหัสสี รูปแบบ Decimal (URL: https://convertingcolors.com/)
 
