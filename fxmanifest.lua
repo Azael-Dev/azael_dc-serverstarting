@@ -18,3 +18,5 @@ server_script {
 }
 
 server_only 'yes'
+
+dependency '/server:4664'
