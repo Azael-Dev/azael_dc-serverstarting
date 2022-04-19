@@ -19,4 +19,7 @@ server_script {
 
 server_only 'yes'
 
-dependency '/server:4664'
+dependencies {
+    '/onesync',
+    '/server:4664'
+}
