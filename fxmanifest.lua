@@ -1,25 +1,21 @@
 fx_version 'cerulean'
-
 game 'gta5'
 
-name 'azael_dc-serverstarting'
-
+author 'Azael Dev <contact@azael.dev> (https://www.azael.dev/)'
 description 'DC - Server Starting (Announcement)'
-
-version '1.1.0'
-
-author 'Azael Dev'
-
+version '1.1.1'
 url 'https://github.com/Azael-Dev/azael_dc-serverstarting'
 
-server_script {
-    'config.server.lua',
-    'server/main.lua'
-}
+lua54 'yes'
 
 server_only 'yes'
 
+server_script {
+    'config/server.config.lua',
+    'source/server/main.server.lua'
+}
+
 dependencies {
-    '/onesync',
-    '/server:4664'
+    '/server:4664',
+    '/onesync'
 }

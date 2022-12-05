@@ -14,7 +14,7 @@ CONFIG = {}
 CONFIG.CitizenFX = {                                        -- CitizenFX (FiveM)
     Keymaster = {                                           -- Keymaster (URL: https://keymaster.fivem.net/)
         Enable = true,                                      -- แสดง Link เชื่อมต่อกับเซิร์ฟเวอร์ (true เท่ากับ เปิดใช้งาน | false เท่ากับ ปิดใช้งาน)
-        ID = 'wqxbqv'                                       -- ID สำหรับ Keymaster ที่ใช้งาน (รูปภาพตัวอย่าง: https://i.imgur.com/ywDM6N7.png)
+        ID = 'KEYMASTER_ID'                                 -- ID สำหรับ Keymaster ที่ใช้งาน (รูปภาพตัวอย่าง: https://i.imgur.com/ywDM6N7.png)
     },
 
     Server = {                                              -- Server (เซิร์ฟเวอร์)
@@ -37,7 +37,7 @@ CONFIG.Discord = {                                          -- Discord
         Text = 'Announce to',                               -- ข้อความ
 
         Ping = {                                            -- ปิง
-            RoleID = 721619126820536380                     -- รหัสบทบาท
+            RoleID = 000000000000000000                     -- รหัสบทบาท
         }
     },
 
