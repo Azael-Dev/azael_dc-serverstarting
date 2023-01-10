@@ -13,11 +13,11 @@ local embeds = {
     {
         color = CONFIG.Discord.Embed.Color,
         title = CONFIG.Discord.Embed.Title,
-        url = (CONFIG.CitizenFX.Keymaster.Enable and string.format('%s/%s', 'https://cfx.re/join', CONFIG.CitizenFX.Keymaster.ID) or ''),
+        url = (CONFIG.CitizenFX.Keymaster.Enable and string.format('%s/%s', 'https://cfx.re/join', CONFIG.CitizenFX.Keymaster.ID) or nil),
         author = {
             name = CONFIG.Discord.Embed.Author.Name,
             icon_url = CONFIG.Discord.Embed.Author.IconURL,
-            url = (CONFIG.CitizenFX.Keymaster.Enable and string.format('%s/%s', 'https://cfx.re/join', CONFIG.CitizenFX.Keymaster.ID) or '')
+            url = (CONFIG.CitizenFX.Keymaster.Enable and string.format('%s/%s', 'https://cfx.re/join', CONFIG.CitizenFX.Keymaster.ID) or nil)
         },
         description = CONFIG.Discord.Embed.Description,
         thumbnail = {
