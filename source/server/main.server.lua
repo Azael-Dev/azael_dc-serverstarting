@@ -9,6 +9,10 @@
 --= You are not allowed to sell this script
 --============================================================ 
 
+---@type boolean
+local isReady = false
+
+---@type table
 local embeds = {
     {
         color = CONFIG.Discord.Embed.Color,
@@ -46,13 +50,25 @@ local embeds = {
     }
 }
 
-Citizen.SetTimeout(CONFIG.Discord.Delay, function()
-    PerformHttpRequest(CONFIG.Discord.Webhook.URL, function(code, result, headers)
-        -- print(tostring(code), tostring(result), tostring(headers))
-    end, 'POST', json.encode({
-        username = CONFIG.Discord.Webhook.Name,
-        avatar_url = CONFIG.Discord.Webhook.AvatarURL,
-        content = string.format('%s <@&%s>', CONFIG.Discord.Content.Text, CONFIG.Discord.Content.Ping.RoleID),
-        embeds = embeds
-    }), {['Content-Type'] = 'application/json'})
-end)
+---consoleListener
+---@param channel string
+---@param message string
+local function consoleListener(channel, message)
+    if isReady or channel ~= 'citizen-server-impl' then return end
+
+    if message:find('Authenticated with cfx.re Nucleus') then
+        isReady = true
+        
+        PerformHttpRequest(CONFIG.Discord.Webhook.URL, function(code, result, headers)
+            -- print(tostring(code), tostring(result), tostring(headers))
+        end, 'POST', json.encode({
+            username = CONFIG.Discord.Webhook.Name,
+            avatar_url = CONFIG.Discord.Webhook.AvatarURL,
+            content = string.format('%s <@&%s>', CONFIG.Discord.Content.Text, CONFIG.Discord.Content.Ping.RoleID),
+            embeds = embeds
+        }), {['Content-Type'] = 'application/json'})
+    end
+end
+
+---https://docs.fivem.net/natives/?_0x281B5448
+RegisterConsoleListener(consoleListener)

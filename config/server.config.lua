@@ -25,8 +25,6 @@ CONFIG.CitizenFX = {                                        -- CitizenFX (FiveM)
 }
 
 CONFIG.Discord = {                                          -- Discord
-    Delay = 15000,                                          -- ความล่าช้าในการส่งข้อความ (1000 เท่ากับ 1 วินาที)
-
     Webhook = {                                             -- Webhook
         URL = 'https://discord.com/api/webhooks/ID/TOKEN',  -- URL
         Name = 'AZAEL - BETA SERVER',                       -- ชื่อ
