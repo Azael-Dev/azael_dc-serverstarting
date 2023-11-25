@@ -50,6 +50,18 @@ local embeds = {
     }
 }
 
+---performHttpRequest
+local function performHttpRequest()
+    PerformHttpRequest(CONFIG.Discord.Webhook.URL, function(code, result, headers)
+        -- print(tostring(code), tostring(result), tostring(headers))
+    end, 'POST', json.encode({
+        username = CONFIG.Discord.Webhook.Name,
+        avatar_url = CONFIG.Discord.Webhook.AvatarURL,
+        content = string.format('%s <@&%s>', CONFIG.Discord.Content.Text, CONFIG.Discord.Content.Ping.RoleID),
+        embeds = embeds
+    }), { ['Content-Type'] = 'application/json'} )
+end
+
 ---consoleListener
 ---@param channel string
 ---@param message string
@@ -58,15 +70,12 @@ local function consoleListener(channel, message)
 
     if message:find('Authenticated with cfx.re Nucleus') then
         isReady = true
-        
-        PerformHttpRequest(CONFIG.Discord.Webhook.URL, function(code, result, headers)
-            -- print(tostring(code), tostring(result), tostring(headers))
-        end, 'POST', json.encode({
-            username = CONFIG.Discord.Webhook.Name,
-            avatar_url = CONFIG.Discord.Webhook.AvatarURL,
-            content = string.format('%s <@&%s>', CONFIG.Discord.Content.Text, CONFIG.Discord.Content.Ping.RoleID),
-            embeds = embeds
-        }), {['Content-Type'] = 'application/json'})
+
+        if GetResourceState('azael_db-guardian') == 'started' then
+            exports['azael_db-guardian']:onConnectionReady(performHttpRequest)
+        else
+            performHttpRequest()
+        end
     end
 end
 
