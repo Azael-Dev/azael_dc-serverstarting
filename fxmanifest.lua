@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Azael Dev <contact@azael.dev> (https://www.azael.dev/)'
 description 'DC - Server Starting (Announcement)'
-version '1.1.3'
+version '1.1.4'
 url 'https://github.com/Azael-Dev/azael_dc-serverstarting'
 
 lua54 'yes'

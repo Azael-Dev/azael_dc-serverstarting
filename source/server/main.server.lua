@@ -42,7 +42,7 @@ local embeds = {
         image = {
             url = CONFIG.Discord.Embed.Image.URL
         },
-        timestamp = os.date('!%Y-%m-%dT%H:%M:%SZ', os.time()),
+        timestamp = os.date('!%Y-%m-%dT%H:%M:%SZ'):gsub('%z', ''),
         footer = {
             text = CONFIG.Discord.Embed.Footer.Text,
             icon_url = CONFIG.Discord.Embed.Footer.IconURL
